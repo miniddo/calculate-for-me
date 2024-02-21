@@ -2,6 +2,9 @@
 export default {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      display: ['Noto Sans KR', 'sans-serif'],
+    },
     extend: {
       colors: {
         default: '#2a2a2a',
