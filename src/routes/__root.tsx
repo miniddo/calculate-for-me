@@ -3,7 +3,7 @@ import { TanStackRouterDevtools } from '@tanstack/router-devtools';
 
 export const Route = createRootRoute({
   component: () => (
-    <div className="font-display h-screen w-screen bg-default">
+    <div className="h-screen w-screen bg-default">
       <Outlet />
       <TanStackRouterDevtools />
     </div>

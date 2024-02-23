@@ -1,25 +1,24 @@
 import { createLazyFileRoute } from '@tanstack/react-router';
+import { Calculate } from '../components/pages';
 
 /**
  * lump-sum : 1명에게 몰아주기
  * split-equally : 1/N 정산하기
  * proportional : 비율 다르게 정산하기
  */
+// export type CalculateType = 'lump-sum' | 'split-equally' | 'proportional';
+
 interface SearchParameters {
-  type?: 'lump-sum' | 'split-equally' | 'proportional';
+  type?: CalculateType;
+  count?: number;
+  price?: number;
 }
 
 export const Route = createLazyFileRoute('/calculate')({
-  component: Calculate,
+  component: Component,
 });
 
-function Calculate() {
-  const { type }: SearchParameters = Route.useSearch();
-  console.log('type', type);
-
-  return (
-    <div className="p-2">
-      <h3>Welcome Calculate!</h3>
-    </div>
-  );
+function Component() {
+  const { type, count, price }: SearchParameters = Route.useSearch();
+  return <Calculate type={type} count={count} price={price} />;
 }
