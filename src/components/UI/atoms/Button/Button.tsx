@@ -1,5 +1,5 @@
 interface Props {
-  variant: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary';
   width?: string;
   disabled?: boolean;
   children?: React.ReactNode;
@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Button = ({
-  variant,
+  variant = 'primary',
   width,
   disabled = false,
   children = '',
