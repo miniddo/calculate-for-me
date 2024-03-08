@@ -1,22 +1,20 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from '@tanstack/react-router';
 import { Button, Input, MinusIcon, PlusIcon } from '../../../UI/atoms';
+import { CalculateInfo } from '../../../../store/calculateStore';
+import useStores from '../../../../hooks/useStores';
 
 interface Props {
   count: number;
   price: number;
 }
 
-interface CalculateInfo {
-  name: string;
-  price: number;
-  proportional: number;
-}
-
 const Proportional = ({ count, price }: Props) => {
   const navigate = useNavigate();
 
   const [calculateInfo, setCalculateInfo] = useState<CalculateInfo[]>([]);
+
+  const { calculateStore } = useStores();
 
   useEffect(() => {
     const tempData = [];
@@ -35,6 +33,10 @@ const Proportional = ({ count, price }: Props) => {
   };
 
   const handleClickGoResult = () => {
+    calculateStore.setCount(count);
+    calculateStore.setPrice(price);
+    calculateStore.setCalculateInfo(calculateInfo);
+
     navigate({ to: '/result', search: { count, price } });
   };
 
@@ -101,7 +103,7 @@ const Proportional = ({ count, price }: Props) => {
       </div>
 
       <div className="flex flex-col items-center justify-center">
-        <div className="relative w-full overflow-x-auto">
+        <div className="relative max-h-[430px] w-full overflow-x-auto overflow-y-scroll">
           <table className="w-full text-left rtl:text-right ">
             <thead className="border-b border-t bg-secondary text-[15px] text-alternative">
               <tr>
