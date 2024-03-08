@@ -25,7 +25,7 @@ const SplitEqually = ({ count, price }: Props) => {
         </div>
       </div>
 
-      <div className="flex h-[150px] flex-col items-center justify-center font-nanum text-alternative">
+      <div className="flex h-[200px] flex-col items-center justify-center font-nanum text-alternative">
         <p className="text-2xl">오늘의 정산금은?</p>
         <p className="text-5xl">
           {Math.floor(price / count).toLocaleString('kr')}원

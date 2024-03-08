@@ -1,5 +1,6 @@
 import { Header } from '../../UI/organisms';
 import LumpSum from './LumpSum/LumpSum';
+import Proportional from './Proportional/Proportional';
 import SplitEqually from './SplitEqually/SplitEqually';
 
 interface Props {
@@ -17,6 +18,9 @@ const Calculate = ({ type = 'lump-sum', count = 1, price = 0 }: Props) => {
         {type === 'lump-sum' && <LumpSum count={count} price={price} />}
         {type === 'split-equally' && (
           <SplitEqually count={count} price={price} />
+        )}
+        {type === 'proportional' && (
+          <Proportional count={count} price={price} />
         )}
       </div>
     </div>

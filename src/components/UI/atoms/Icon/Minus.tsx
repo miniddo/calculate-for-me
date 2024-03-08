@@ -3,7 +3,7 @@ interface Props {
   color?: string;
 }
 
-const PlusIcon = ({ size = 3, color = 'currentColor' }: Props) => {
+const MinusIcon = ({ size = 3, color = 'currentColor' }: Props) => {
   const sizeDic: { [key: number]: string } = {
     1: 'h-1 w-1',
     2: 'h-2 w-2',
@@ -18,17 +18,17 @@ const PlusIcon = ({ size = 3, color = 'currentColor' }: Props) => {
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
-      viewBox="0 0 18 18"
+      viewBox="0 0 18 2"
     >
       <path
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
-        d="M9 1v16M1 9h16"
+        d="M1 1h16"
       />
     </svg>
   );
 };
 
-export default PlusIcon;
+export default MinusIcon;

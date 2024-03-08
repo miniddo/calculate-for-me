@@ -4,5 +4,6 @@ import HomeIcon from './Icon/Home';
 import PlusIcon from './Icon/Plus';
 import Spinner from './Spinner/Spinner';
 import Input from './Input/Input';
+import MinusIcon from './Icon/Minus';
 
-export { Button, CloseIcon, HomeIcon, PlusIcon, Spinner, Input };
+export { Button, CloseIcon, HomeIcon, PlusIcon, Spinner, Input, MinusIcon };

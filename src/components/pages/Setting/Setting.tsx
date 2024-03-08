@@ -55,10 +55,10 @@ const Setting = ({ count: _count, price: _price }: Props) => {
       <div className="flex items-center gap-2 px-[20px] py-[5px] font-nanum text-xl text-alternative">
         <p>정산할 인원은</p>
         <Input
+          className="block w-[40px] border-b border-secondary bg-transparent text-center text-xl focus:bg-transparent focus:outline-none"
           type="number"
           id="count"
           name="count"
-          width="40px"
           value={count}
           onChange={handleChangeCount}
         />
@@ -68,11 +68,11 @@ const Setting = ({ count: _count, price: _price }: Props) => {
       <div className="flex items-center gap-2 px-[20px] py-[5px] font-nanum text-xl text-alternative">
         <p>정산할 금액은</p>
         <Input
+          className="block w-[90px] border-b border-secondary bg-transparent text-center text-xl focus:bg-transparent focus:outline-none"
           type="number"
           id="price"
           name="price"
-          width="90px"
-          value={price}
+          value={price.toString()}
           onChange={handleChangePrice}
         />
         <p>원 입니다</p>
