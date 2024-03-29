@@ -1,4 +1,4 @@
-import { Header } from '../../UI/organisms';
+import { Header } from '@components/UI/organisms';
 import LumpSum from './LumpSum/LumpSum';
 import Proportional from './Proportional/Proportional';
 import SplitEqually from './SplitEqually/SplitEqually';

@@ -1,5 +1,5 @@
 import { useNavigate } from '@tanstack/react-router';
-import { HomeIcon } from '../../atoms';
+import { HomeIcon } from '@components/UI/atoms';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -9,10 +9,10 @@ const Header = () => {
   };
 
   return (
-    <div className="font-notoSans flex h-[60px] w-full items-center justify-between px-3">
-      <div className="h-[24px] w-[24px]"></div>
-      <p className="text-alternative font-medium">정산해줘</p>
-      <div className="h-[24px] w-[24px]" onClick={handleClickHomeIcon}>
+    <div className="flex h-[60px] w-full items-center justify-between px-3 font-notoSans">
+      <div className="size-[24px]"></div>
+      <p className="font-medium text-alternative">정산해줘</p>
+      <div className="size-[24px]" onClick={handleClickHomeIcon}>
         <HomeIcon />
       </div>
     </div>

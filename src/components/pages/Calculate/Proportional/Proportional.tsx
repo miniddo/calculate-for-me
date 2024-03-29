@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from '@tanstack/react-router';
-import { Button, Input, MinusIcon, PlusIcon } from '../../../UI/atoms';
-import { CalculateInfo } from '../../../../store/calculateStore';
-import useStores from '../../../../hooks/useStores';
+import { Button, Input, MinusIcon, PlusIcon } from '@components/UI/atoms';
+import { CalculateInfo } from '@store/calculateStore';
+import useStores from '@hooks/useStores';
 
 interface Props {
   count: number;

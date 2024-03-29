@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from '@tanstack/react-router';
-import { Header } from '../../UI/organisms';
-import { Button, Input } from '../../UI/atoms';
+import { Header } from '@components/UI/organisms';
+import { Button, Input } from '@components/UI/atoms';
 
 interface Props {
   count?: number;

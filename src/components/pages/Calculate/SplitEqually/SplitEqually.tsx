@@ -1,5 +1,5 @@
 import { useNavigate } from '@tanstack/react-router';
-import { Button } from '../../../UI/atoms';
+import { Button } from '@components/UI/atoms';
 
 interface Props {
   count: number;

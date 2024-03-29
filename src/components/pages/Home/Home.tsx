@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from '@tanstack/react-router';
-import useStores from '../../../hooks/useStores';
-import Button from '../../UI/atoms/Button/Button';
+import useStores from '@hooks/useStores';
+import Button from '@components/UI/atoms/Button/Button';
 
 const Home = () => {
   const { calculateStore } = useStores();

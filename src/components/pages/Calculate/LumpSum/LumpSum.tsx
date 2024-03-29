@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from '@tanstack/react-router';
-import { Button, Spinner } from '../../../UI/atoms';
+import { Button, Spinner } from '@components/UI/atoms';
 
 interface Props {
   count: number;
