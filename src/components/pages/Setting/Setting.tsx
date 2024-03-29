@@ -59,7 +59,7 @@ const Setting = ({ count: _count, price: _price }: Props) => {
           type="number"
           id="count"
           name="count"
-          value={count}
+          value={count.toString()}
           onChange={handleChangeCount}
         />
         <p>명 입니다</p>

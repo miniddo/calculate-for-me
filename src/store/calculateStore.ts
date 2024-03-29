@@ -42,6 +42,10 @@ class CalculateStore {
   setCalculateInfo(value: CalculateInfo[]) {
     this._calculateInfo = value;
   }
+
+  clearCalculateInfo() {
+    this._calculateInfo = [];
+  }
 }
 
 export default CalculateStore;

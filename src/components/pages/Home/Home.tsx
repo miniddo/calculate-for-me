@@ -1,7 +1,14 @@
+import { useEffect } from 'react';
 import { useNavigate } from '@tanstack/react-router';
+import useStores from '../../../hooks/useStores';
 import Button from '../../UI/atoms/Button/Button';
 
 const Home = () => {
+  const { calculateStore } = useStores();
+  useEffect(() => {
+    calculateStore.clearCalculateInfo();
+  }, [calculateStore]);
+
   const navigate = useNavigate();
 
   const handleClickStartButton = () => {
@@ -15,12 +22,12 @@ const Home = () => {
           src="https://static.vecteezy.com/system/resources/previews/012/224/971/original/bags-of-money-symbol-of-wealth-success-png.png"
           width={200}
         />
-        <p className="font-nanum text-alternative text-5xl font-bold">
+        <p className="font-nanum text-5xl font-bold text-alternative">
           정산해줘
         </p>
       </div>
       <div
-        className="font-notoSans flex justify-center pt-[80px]"
+        className="flex justify-center pt-[80px] font-notoSans"
         onClick={handleClickStartButton}
       >
         <Button variant="primary">지금 바로 시작하기</Button>

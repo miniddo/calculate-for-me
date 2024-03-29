@@ -17,16 +17,20 @@ const Proportional = ({ count, price }: Props) => {
   const { calculateStore } = useStores();
 
   useEffect(() => {
-    const tempData = [];
-    for (let i = 0; i < count; i++) {
-      tempData.push({
-        name: '홍길동',
-        price: Math.floor(price / count),
-        proportional: 1,
-      });
+    if (calculateStore.calculateInfo.length > 0) {
+      setCalculateInfo(calculateStore.calculateInfo);
+    } else {
+      const tempData = [];
+      for (let i = 0; i < count; i++) {
+        tempData.push({
+          name: '홍길동',
+          price: Math.floor(price / count),
+          proportional: 1,
+        });
+      }
+      setCalculateInfo(tempData);
     }
-    setCalculateInfo(tempData);
-  }, [count, price]);
+  }, [count, price, calculateStore.calculateInfo]);
 
   const handleClickGoBack = () => {
     navigate({ to: '/setting', search: { count, price } });
@@ -106,14 +110,14 @@ const Proportional = ({ count, price }: Props) => {
         <div className="relative max-h-[430px] w-full overflow-x-auto overflow-y-scroll">
           <table className="w-full text-left rtl:text-right ">
             <thead className="border-b border-t bg-secondary text-[15px] text-alternative">
-              <tr>
-                <th scope="col" className="px-6 py-3">
+              <tr className="w-[100%]">
+                <th scope="col" className="w-[25%] px-5 py-3">
                   이름
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="w-[35%] px-5 py-3">
                   금액
                 </th>
-                <th scope="col" className="px-6 py-3">
+                <th scope="col" className="w-[40%] px-5 py-3">
                   비율
                 </th>
               </tr>
@@ -121,7 +125,7 @@ const Proportional = ({ count, price }: Props) => {
             <tbody className="text-sm text-alternative">
               {calculateInfo.map((info: CalculateInfo, idx: number) => (
                 <tr key={idx} className="border-b">
-                  <td className="px-6 py-4 font-semibold">
+                  <td className="px-5 py-4 font-semibold">
                     <Input
                       id="name"
                       className="block w-[70px] rounded-lg border border-gray-300 bg-gray-50 px-2.5 py-1 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
@@ -129,14 +133,14 @@ const Proportional = ({ count, price }: Props) => {
                       onChange={(e) => handleChangeName(e, idx)}
                     />
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-5 py-4">
                     <div className="flex items-center">
                       <p className="font-semibold">
                         {info.price.toLocaleString('kr')} 원
                       </p>
                     </div>
                   </td>
-                  <td className="flex items-center gap-1 px-6 py-4 font-semibold">
+                  <td className="flex items-center gap-1 px-5 py-4 font-semibold">
                     <button
                       className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-300 bg-white p-1 text-sm font-medium text-gray-500"
                       type="button"

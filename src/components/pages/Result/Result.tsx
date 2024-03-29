@@ -1,10 +1,20 @@
+import { useNavigate } from '@tanstack/react-router';
 import useStores from '../../../hooks/useStores';
 import { CalculateInfo } from '../../../store/calculateStore';
-import { UserIcon } from '../../UI/atoms';
+import { Button, UserIcon } from '../../UI/atoms';
 import { Header } from '../../UI/organisms';
 
 const Result = () => {
   const { calculateStore } = useStores();
+
+  const navigate = useNavigate();
+  const handleClickGoBack = () => {
+    const { count, price } = calculateStore;
+    navigate({
+      to: '/calculate',
+      search: { type: 'proportional', count, price },
+    });
+  };
 
   return (
     <div className="h-screen w-screen font-notoSans">
@@ -44,6 +54,12 @@ const Result = () => {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className="flex h-[120px] items-center justify-center gap-4">
+        <Button variant="secondary" onClick={handleClickGoBack}>
+          이전으로
+        </Button>
       </div>
     </div>
   );
