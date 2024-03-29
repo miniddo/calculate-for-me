@@ -1,0 +1,1 @@
+import{j}from"./index-DDwMrstv.js";const n=({className:t="",type:r="text",defaultValue:o="",value:s="",id:x="",name:p="",readOnly:u=!1,onChange:i})=>s?j.jsx("input",{className:t,type:r,id:x,name:p,value:s,readOnly:u,onChange:i}):j.jsx("input",{className:t,type:r,id:x,name:p,defaultValue:o,readOnly:u,onChange:i});export{n as I};
