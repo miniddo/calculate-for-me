@@ -1,1 +1,0 @@
-import{j as x}from"./index-DDwMrstv.js";const l=({variant:t="primary",width:o,disabled:e=!1,children:r="",onClick:s})=>{const n=`bg-${t} rounded-lg px-5 py-2.5 text-sm font-semibold h-[40px] text-${t==="primary"?"default":"alternative"} ${o?`w-[${o}]`:""}`;return x.jsx("button",{type:"button",className:n,disabled:e,onClick:s,children:r})};export{l as B};
