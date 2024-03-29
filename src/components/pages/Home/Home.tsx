@@ -18,10 +18,7 @@ const Home = () => {
   return (
     <div className="grid h-screen w-screen place-content-center">
       <div className="flex flex-col items-center justify-end">
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/012/224/971/original/bags-of-money-symbol-of-wealth-success-png.png"
-          width={200}
-        />
+        <p className="mb-5 text-7xl">💰</p>
         <p className="font-nanum text-5xl font-bold text-alternative">
           정산해줘
         </p>
