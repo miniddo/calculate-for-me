@@ -6,5 +6,6 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), TanStackRouterVite(), tsconfigPaths()],
-  // base: '/calculate-for-me/',
+  // createRouter의 bathpath도 함께 설정해줘야 함
+  base: '/calculate-for-me/',
 });
