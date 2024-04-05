@@ -26,12 +26,9 @@ const Result = () => {
       </div>
 
       <div className="px-[20px]">
-        <div className="max-h-[500px] w-full max-w-md overflow-y-scroll rounded-lg border border-gray-200 bg-white p-4 shadow sm:p-8">
-          <div className="flow-root">
-            <ul
-              role="list"
-              className="divide-y divide-gray-200 dark:divide-gray-700"
-            >
+        <div className="max-h-[500px] w-full overflow-y-scroll rounded-lg border border-gray-200 bg-white p-4 shadow sm:p-8">
+          <div className="">
+            <ul role="list" className="divide-y divide-gray-200">
               {calculateStore.calculateInfo.map(
                 (data: CalculateInfo, idx: number) => (
                   <li className="py-3 sm:py-4" key={idx}>
@@ -40,7 +37,7 @@ const Result = () => {
                         <UserIcon size={7} />
                       </div>
                       <div className="ms-4 min-w-0 flex-1">
-                        <p className="truncate text-base font-medium text-gray-900 dark:text-white">
+                        <p className="text-base font-medium text-gray-900 dark:text-white">
                           {data.name}
                         </p>
                       </div>
