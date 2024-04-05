@@ -37,11 +37,11 @@ const Result = () => {
                         <UserIcon size={7} />
                       </div>
                       <div className="ms-4 min-w-0 flex-1">
-                        <p className="text-base font-medium text-gray-900 dark:text-white">
+                        <p className="text-base font-medium text-gray-900">
                           {data.name}
                         </p>
                       </div>
-                      <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                      <div className="inline-flex items-center text-base font-semibold text-gray-900">
                         {data.price.toLocaleString('kr')}원
                       </div>
                     </div>

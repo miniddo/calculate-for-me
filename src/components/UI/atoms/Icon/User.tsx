@@ -16,7 +16,7 @@ const UserIcon = ({ size = 3, color = 'currentColor' }: Props) => {
 
   return (
     <svg
-      className={`${sizeDic[size]} text-gray-800 dark:text-white`}
+      className={`${sizeDic[size]} text-gray-800`}
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
